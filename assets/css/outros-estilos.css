@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 :root {
@@ -11,16 +10,18 @@
 }
 
 body {
+    position: relative;
     display: flex;
+    color: #555;
     justify-content: center;
     align-items: center;
     height: 100dvh;
-    background-color: #f3f4f6;
+    background-color: #1f2937;
     font-family: Arial, sans-serif;
 }
 
 .login-container {
-    display: none;
+    display: block;
     background-color: #fff;
     padding: 20px 40px;
     border-radius: 8px;
@@ -86,7 +87,7 @@ button:focus {
     cursor: pointer;
 }
 
-.main-game-page {
+.main-game-section {
     display: none;
     background-color: #f3f3f3;
     height: 100dvh;
@@ -105,3 +106,66 @@ button:focus {
     padding: 5px;
     flex-grow: 1;
 }
+
+#username {
+    color: #555;
+}
+
+.attack, .life, .card-cost-display  {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: black;
+    border: 1px solid white;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    
+  }
+  
+  .attack, .life {
+    width: 1.5em;
+  }
+  
+  .card-cost-display {
+    position: absolute;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    right: 4px;
+  
+  }
+  
+  .card-stats {
+    position: absolute;
+    bottom: 4px;
+    font-weight: bold;
+    gap: 25px;
+  }
+  
+  .attack-icon, .life-icon {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .carta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .card-image {
+    width: 90%;
+    position: absolute;
+  }
+
+  #scoreboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
