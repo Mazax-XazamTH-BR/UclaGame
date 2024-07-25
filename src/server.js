@@ -79,9 +79,10 @@ console.log("O Servidor está ligado.");
 
 // ---------------------------------------------
 
-// import { cards, cardsTextDescription } from './cards.js'; // importando as cartas
+import { cards, cardsTextDescription } from './cards.js'; // importando as cartas
 
 import { Carta } from './cardsPOO.js';
+
 
 //console.log(cards);
 //console.log(cardsTextDescription);
@@ -128,7 +129,7 @@ const interpretDeckCode = (deckCode, player) => {
                 cost: card.baseCost,
                 image: card.image,
                 attack: card.baseAttack,
-                life: card.baseLife
+                health: card.baseHealth
             };
         } else {
             console.error("ID de carta inválida:", cardId);
@@ -174,21 +175,41 @@ const interpretDeckCode = (deckCode, player) => {
 
     const createCardObjects = (player, array = []) => {
         // intanciar objetos da classe carta
-        console.log('array:');
+        console.log('array recebido do cliente com as cartas a serem ciradas (instanciadas):');
         console.log(array);
     
         let cardsCreated = []
     
         array.forEach(card => {
+
+            // Buscar a carta completa pelo ID
+            let cardData = cards.find(c => c.id === parseInt(card.id));
+
+            // Adicionar logs para verificar o cardData
+            console.log('Dados da carta encontrados:', cardData);
+
+
             let cardKeywords = cards.find(c => c.id === card.id).keywords;
     
             const cardName = cards.find(c => c.id === card.id).name;
     
            
-            const novaCarta = new Carta(card.id, cardName, card.cost, card.cost, card.image, card.attack, card.attack, card.life, card.life, cardKeywords);
+            const novaCarta = new Carta(
+                card.id, 
+                cardName, 
+                card.cost, 
+                card.cost, 
+                card.image, 
+                card.attack, // baseAttack
+                card.attack, // currentAttack
+                card.health, // baseHealth
+                card.health,  // currentHealth
+                cardKeywords);
             
             cardsCreated.push(novaCarta);
-        })
+        // Log para verificar a criação da carta
+        console.log('Carta criada:', novaCarta);
+    });
         let message = {
             type: 'cardsCreated',
             message: cardsCreated
