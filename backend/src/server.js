@@ -79,9 +79,9 @@ console.log("O Servidor está ligado.");
 
 // ---------------------------------------------
 
-import { cards, cardsTextDescription } from 'file:///C:/Users/User/Desktop/programacao/UCLA-Online//frontend/js/cards.js'; // importando as cartas
+import { cards, cardsTextDescription } from '../../frontend/js/cards.js'; // importando as cartas
 
-import { Carta } from 'file:///C:/Users/User/Desktop/programacao/UCLA-Online//frontend/js/cardsPOO.js';
+import { Carta } from '../../frontend/js/cardsPOO.js';
 
 
 //console.log(cards);
