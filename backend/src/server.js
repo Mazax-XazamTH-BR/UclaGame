@@ -79,9 +79,9 @@ console.log("O Servidor está ligado.");
 
 // ---------------------------------------------
 
-import { cards, cardsTextDescription } from './cards.js'; // importando as cartas
+import { cards, cardsTextDescription } from 'file:///C:/Users/User/Desktop/programacao/UCLA-Online//frontend/js/cards.js'; // importando as cartas
 
-import { Carta } from './cardsPOO.js';
+import { Carta } from 'file:///C:/Users/User/Desktop/programacao/UCLA-Online//frontend/js/cardsPOO.js';
 
 
 //console.log(cards);
@@ -113,7 +113,7 @@ const interpretDeckCode = (deckCode, player) => {
     //...
     let cardIds = deckCode.split('|');
     let deckCardCount = cardIds.length;
-    let handCardCount = 0;
+    //let handCardCount = 0;
 
     if (!editMode && deckCardCount < 30) {
         alert('Tamanho do deck inválido.');

@@ -246,7 +246,7 @@ export let cardsTextDescription = [
             return `Fulgurvoltz 
           ${cardElement.getAttribute('data-cost')} de mana | 8/11 
           (Elétrico | Corpo-a-corpo |Elemental | Corpo-a-Corpo |)
-          “Custo (1) a menos para cada mana não gasta por você ao longo desta partida (Mín.4). [${unspentMana}].” 
+          “Custo (1) a menos para cada mana não gasta por você ao longo desta partida (Mín.4).” 
           #Grito de Guerra: “destruo todas as ../assets/cartas não-elétricas com menos de 8 de ataque.”`
         } 
       },
@@ -337,7 +337,7 @@ export let cardsTextDescription = [
             return `Voltexz 
            ${cardElement.getAttribute('data-cost')} de mana | 10/7
           (Elétrico | Longa-Distância |) 
-          “Custo (2) a menos para cada mana não gasta por você ao longo da partida. (Mín.2) (${unspentMana})” #Grito de Guerra: “causo 3 de dano a todas as ../assets/cartas inimigas e concedo +1/+1 às suas outras ../assets/cartas até o final do turno. Além disso, você pode gastar até 4 de mana adicional. Para cada mana gasta dessa forma, aprimore o efeito do meu grito de guerra. (Máx. 7 de dano e +5/+5).”`
+          “Custo (2) a menos para cada mana não gasta por você ao longo da partida. (Mín.2)” #Grito de Guerra: “causo 3 de dano a todas as cartas inimigas e concedo +1/+1 às suas outras ../assets/cartas até o final do turno. Além disso, você pode gastar até 4 de mana adicional. Para cada mana gasta dessa forma, aprimore o efeito do meu grito de guerra. (Máx. 7 de dano e +5/+5).”`
         } 
       },
       { 
@@ -412,7 +412,7 @@ export let cardsTextDescription = [
               #Grito de Guerra: “gero (3) de mana de estoque para você.” 
               #Condicional: “você pode ou não usar meu poder. Se usar, perco 1 de durabilidade e invoco um 'Elemental de Água Gigante' com atributos baseados no total de vida curado de suas ../assets/cartas e avatar.” 
               #Início do turno: “curo 1 de vida de todos os aliados.”
-              Condicional: “se eu tiver visto seu avatar e/ou suas ../assets/cartas sendo curadas em um total de 38+ de vida, vença o jogo imediatamente. (${totalHealed}/36).”`
+              Condicional: “se eu tiver visto seu avatar e/ou suas ../assets/cartas sendo curadas em um total de 38+ de vida, vença o jogo imediatamente. ({totalHealed}/36).”`
           }
       },
       { 
@@ -620,7 +620,7 @@ export let cardsTextDescription = [
      return `Elemental de Água Gigante 
     10 de mana | 0/1
     (Aquático | Corpo-a-corpo | Elemental |)
-    “Se suas ../assets/cartas tiverem curado 8+ de vida, eu custo (5).”#Constante: “eu tenho +1/+1 para cada 2 pontos de vida que suas ../assets/cartas curaram (arredondado para cima) (${Math.ceil(totalHealed / 2)}).”` 
+    “Se suas ../assets/cartas tiverem curado 8+ de vida, eu custo (5).”#Constante: “eu tenho +1/+1 para cada 2 pontos de vida que suas ../assets/cartas curaram (arredondado para cima) (Math.ceil(totalHealed / 2)}).”` 
     }
   },
   {

@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link rel="stylesheet" href="./assets/css/outros-estilos.css">
-<link rel="stylesheet" href="assets/css/tailwindOutput.css">
+<link rel="stylesheet" href="../assets/css/outros-estilos.css">
+<link rel="stylesheet" href="../assets/css/tailwindOutput.css">
 <link rel="shortcut icon" href="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UCLA | CCG De Fantasia </title>
 </head>
 <body class="bg-gray-800 text-zinc-300 font-sans py-4 my-4">
-    <div class="login-container">
-        <form class="login-form">
-            <h2>Login</h2>
-            <div class="input-group">
-                <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <button type="submit" class="login__button">Entrar</button>
-        </form>
-    </div>
-
-   
-        <div id="codigoESelecionar" class="hidden flex flex-col items-center justify-center w-full max-w-lg p-8 bg-white shadow-lg rounded-lg border border-gray-200">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Selecione o Deck</h2>
-            <div class="flex flex-col w-full space-y-4">
-                <div class="flex flex-col items-center space-x-4">
-                    <label for="deckCodeInput" class="text-lg font-medium text-gray-700">Código do Deck:</label>
-                    <input type="text" id="deckCodeInput" placeholder="Digite o código do deck" class="flex-grow p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <button id="interpretButton" class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">Selecionar Deck</button>
-            </div>
-        </div>
-
-        <section id="main-game-section" class="hidden max-w-5xl mx-auto p-6 space-y-6 flex-col">
+  <section id="main-game-section" class="flex max-w-5xl mx-auto p-6 space-y-6 flex-col">
             <!-- Placar de Pontuação da Partida -->
             <div id="scoreborad" class="flex justify-between p-4 bg-white rounded shadow-md">
                 <div class="text-lg text-gray-900 font-semibold">Você: <span id="score-player1" class="font-bold">0</span></div>
@@ -91,7 +68,7 @@
             
         
             <!-- Mão de Cartas -->
-                <div id="hand" class="flex justify-center space-x-2 mb-4"></div>
+                <div id="hand" class="flex justify-center space-x-2 mb-4 h-28"></div>
                 <!--<button id="drawButton" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">Comprar Carta</button>
             </div>-->
         
@@ -104,8 +81,8 @@
         
     </section>
 
-<script type="module" src="src/cardsPOO.js"></script>   
-<script type="module" src="src/cards.js"></script> 
-<script src="src/clientSide.js"></script>
+    
+<!--<script src="src/clientSide.js"></script>-->
+<script src="src/cardsPOO.js"></script>
 </body>
 </html>

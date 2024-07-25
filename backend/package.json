@@ -105,8 +105,10 @@
     "yaml": "^2.4.5"
   },
   "scripts": {
-    "buildcss": "postcss ./assets/css/tailwindInput.css -o ./assets/css/tailwindOutput.css",
-    "watchcss": "postcss ./assets/css/tailwindInput.css -o ./assets/css/tailwindOutput.css --watch"
+    "buildcss": "postcss ../assets/css/tailwindInput.css -o ../assets/css/tailwindOutput.css",
+    "watchcss": "postcss ../assets/css/tailwindInput.css -o ../assets/css/tailwindOutput.css --watch",
+    "start": "node ./src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "keywords": [],
   "author": "",
