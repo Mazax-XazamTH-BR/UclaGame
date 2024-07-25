@@ -131,7 +131,7 @@ class Carta {
 const handElement = document.getElementById('hand');
 
 // WebSocket
-const ws = new WebSocket('ws://192.168.0.12:8081');
+const ws = new WebSocket('wss://uclagamewsserver.onrender.com');
 
 ws.onopen = () => {
     console.log("Eu sou um cliente e estou conectado ao servidor.");
